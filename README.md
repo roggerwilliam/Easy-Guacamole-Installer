@@ -16,7 +16,7 @@ This project allows you to easily set up a Guacamole jump-host with optional TLS
 
 ## Automatic Installation
 
-🚀 To start building your Guacamole appliance, paste the below link into a terminal & follow the prompts (**do NOT run as root, the script will prompt for sudo as needed**): 
+🚀 Paste the below link into a terminal & follow the prompts (**do NOT run as root, the script will prompt for sudo**): 
 
 ```shell
 wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
@@ -28,12 +28,11 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
   - **Debian: 12.x or 11.x**
   - **Ubuntu LTS variants: 24.04, 23.04, 22.04**
   - **Raspbian Buster or Bullseye**
-  - **Official vendor cloud images equivalent to the above versions.** 
   - **1 CPU core + 2GB RAM for every 25 users (plus minimum RAM & disk space for your selected OS).**
 - **Open TCP ports: 22, 80, and 443 (no other services using 80, 8080 & 443)**
 - **If selecting either of the TLS reverse proxy options, you must create a PRIVATE DNS record for the internal proxy site, and an additional PUBLIC DNS record if selecting the Let's Encrypt option.**
 - **Sudo & wget packages installed**
-- **The user running the 1-setup.sh script must have sudo permissions**
+- **The user running `1-setup.sh` must have sudo permissions**
 
 ## Setup Script Menu
 
@@ -53,11 +52,12 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 ⚙️ **To customize the many available script options:**
 
 - Exit `1-setup.sh` at the first prompt.
-- All configurable script options are noted at the start of `1-setup.sh` under **Silent setup options**. Re-run the edited setup script after making your changes. (Re-run script locally, do not re-run the automatic install web link). 
-- Certain combinations of the **Silent setup options** will allow for a fully unattended install supporting mass deployment or highly customized docker builds.
+- All configurable script options are shown under **Silent setup options** at the start of `1-setup.sh`. 
+- Certain combinations of the **Silent setup options** will allow for a fully unattended install supporting mass deployment or highly customised docker builds.
+- Re-run your edited script locally after making changes (do not re-run the automatic install web link - see below. 
 
 **Other custom install notes:**
-- **Caution:** Re-running the auto-installer re-downloads the suite of scripts and this will overwrite all your script edits. You must therefore run 1-setup.sh LOCALLY after editing. If any other scripts are edited, their corresponding download links in the 1-setup.sh script must also be commented out.
+- **Caution:** Re-running the auto-installer re-downloads the suite of scripts and this will overwrite all your script edits. You must therefore run 1-setup.sh LOCALLY after editing. If any other child scripts are edited, their corresponding download links in the 1-setup.sh script must also be commented out.
 - Upgrade scripts are **automatically customised with your specifc installation settings** for consistent future updates. (Re-downloading from the auto install link after install will overwrite all custom settings as above.)
 - Nginx reverse proxy is configured to default to at least TLS 1.2. For ancient systems, see commented sections of the `/etc/nginx/nginx.conf` file after install.
 - A daily MySQL backup job is automatically configured under the script owner's crontab.
@@ -74,10 +74,10 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 
 🎨 **Follow the theme and branding instructions** [here](https://github.com/itiligent/Guacamole-Install/tree/main/guac-custom-theme-builder). To revert to the default theme, simply delete the branding.jar file from `/etc/guacamole/extensions`, clear your browser cache and restart.
 
-## Managing Self-Signed TLS Certs with Nginx (the easy way!)
+## Managing Self-Signed TLS Certs With Nginx
 
 **To renew self-signed certificates or change the reverse proxy local DNS name/IP address:** 
-- Re-run `4a-install-tls-self-signed-nginx.sh` to create a new certificate for Nginx (accompanying browser client certificates will also be updated). Always clear your browser cache after changing certificates.
+- Re-run `4a-install-tls-self-signed-nginx.sh` to create a new Nginx certificate (accompanying browser client certificates will also be updated). Always clear your browser cache after changing certificates.
 
 ## Active Directory Integration
 
@@ -96,9 +96,9 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 - 👔 **For a separate APPLICATION layer:** Run `1-setup.sh` and point new installations to your separate database instance. Just say **no** to the "Install MySQL locally" option and any other local reverse proxy install options.
 - 👔 **For a separate FRONT END layer:** Use the included Nginx installer scripts to build out a separate Nginx front end layer, and then apply your preferred TLS load balancing technique. Alternatively, AWS/Azure/GCP load balancers or [HA Proxy](https://www.haproxy.org/) may provide superior session persistence & affinity compared to [Open Source Nginx](https://www.nginx.com/products/nginx/compare-models/).
 
-### Installer Script Download Manifest
+### Script Download Manifest
 
-📦 **The autorun link downloads these repo files into `$HOME/guac-setup`:**
+📦 **The autorun link downloads these files into `$HOME/guac-setup`:**
 
 - `1-setup.sh`: The parent setup script.
 - `2-install-guacamole.sh`: Guacamole source build & installer script.

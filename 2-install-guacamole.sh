@@ -272,7 +272,7 @@ mkdir -p /etc/guacamole/extensions/
 adduser "${GUACD_ACCOUNT}" --disabled-password --disabled-login --gecos "" > /dev/null 2>&1
 gpasswd -d "${GUACD_ACCOUNT}" users > /dev/null 2>&1
 echo -e "\nMatch User ${GUACD_ACCOUNT}\n    X11Forwarding no\n    AllowTcpForwarding no\n    PermitTTY no\n    ForceCommand cvs server" | sudo tee -a /etc/ssh/sshd_config > /dev/null 2>&1
-systemctl restart sshd
+systemctl restart ssh
 touch "${CRON_DENY_FILE}"
 chmod 644 "${CRON_DENY_FILE}"
 chown root:root "${CRON_DENY_FILE}"

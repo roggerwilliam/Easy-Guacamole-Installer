@@ -106,7 +106,7 @@ action = %(action_mwl)s
 ignoreip =
 
 [sshd]
-backend=systemd
+backend = systemd
 enabled = true
 EOF
 

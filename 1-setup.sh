@@ -80,7 +80,7 @@ mkdir -p $DOWNLOAD_DIR
 mkdir -p $DB_BACKUP_DIR
 
 # GitHub download branch
-GITHUB="https://raw.githubusercontent.com/itiligent/Guacamole-Install/main"
+GITHUB="https://raw.githubusercontent.com/roggerwilliam/Guacamole-Install/main"
 
 # Version of Guacamole to install
 GUAC_VERSION="1.5.5"
@@ -133,7 +133,7 @@ RSA_KEYLENGTH="2048"            # Self signed RSA TLS key length. At least 2048,
 CERT_COUNTRY="AU"               # Self signed cert setup, 2 character country code only, must not be blank
 CERT_STATE="Victoria"           # Self signed cert setup, must not be blank
 CERT_LOCATION="Melbourne"       # Self signed cert setup, must not be blank
-CERT_ORG="Itiligent"            # Self signed cert setup, must not be blank
+CERT_ORG="roggerwilliam"            # Self signed cert setup, must not be blank
 CERT_OU="I.T."                  # Self signed cert setup, must not be blank
 CERT_DAYS="3650"                # Self signed cert setup, days until self signed TLS cert expiry, blank = default 3650
 LETS_ENCRYPT=""                 # Add Lets Encrypt public TLS cert for Nginx (true/false, self signed TLS not available with this option) 
@@ -153,7 +153,7 @@ CRON_DENY_FILE="/etc/cron.deny" # Distro's cron deny file
 # Script branding header
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by Itiligent"
+echo -e "              ${LGREEN}Powered by roggerwilliam"
 echo
 echo
 
@@ -657,7 +657,7 @@ fi
 clear
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by Itiligent"
+echo -e "              ${LGREEN}Powered by roggerwilliam"
 echo
 echo
 

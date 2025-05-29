@@ -734,11 +734,11 @@ if [[ "${GUAC_URL_REDIR}" = true ]] && [[ "${INSTALL_NGINX}" = false ]]; then
 fi
 
 # Update Linux firewall
-echo -e "${GREY}Updating firewall rules to allow only SSH and tcp 7564..."
+echo -e "${GREY}Updating firewall rules to allow only SSH and tcp 8080..."
 ufw default allow outgoing >/dev/null 2>&1
 ufw default deny incoming >/dev/null 2>&1
 ufw allow OpenSSH >/dev/null 2>&1
-ufw allow 7564/tcp >/dev/null 2>&1
+ufw allow 8080/tcp >/dev/null 2>&1
 echo "y" | sudo ufw enable >/dev/null 2>&1
 ufw logging off >/dev/null 2>&1 # Reduce firewall logging noise
 if [[ $? -ne 0 ]]; then

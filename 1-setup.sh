@@ -80,7 +80,7 @@ mkdir -p $DOWNLOAD_DIR
 mkdir -p $DB_BACKUP_DIR
 
 # GitHub download branch
-GITHUB="https://raw.githubusercontent.com/roggerwilliam/Guacamole-Install/main"
+GITHUB="https://raw.githubusercontent.com/roggerwilliam/Easy-Guacamole-Installer/refs/heads/main"
 
 # Version of Guacamole to install
 GUAC_VERSION="1.5.5"
@@ -153,7 +153,7 @@ CRON_DENY_FILE="/etc/cron.deny" # Distro's cron deny file
 # Script branding header
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by roggerwilliam"
+echo -e "              ${LGREEN}Powered by"
 echo
 echo
 
@@ -657,7 +657,7 @@ fi
 clear
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by roggerwilliam"
+echo -e "              ${LGREEN}Powered by"
 echo
 echo
 

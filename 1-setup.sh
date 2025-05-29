@@ -95,8 +95,8 @@ MYSQLJCON_SOURCE_LINK="https://dev.mysql.com/get/Downloads/Connector-J/mysql-con
 MYSQL_VERSION=""
 MARIADB_SOURCE_LINK="https://downloads.mariadb.com/MariaDB/mariadb_repo_setup"
 
-# Reverse proxy uses this URL (Guacamole default is http://localhost:8080/guacamole/):
-GUAC_URL=http://localhost:8080/guacamole/
+# Reverse proxy uses this URL (Guacamole default is http://localhost:7564/guacamole/):
+GUAC_URL=http://localhost:7564/guacamole/
 
 # Get the default route interface IP. May need to manually override this for multi homed systems or where cloud images may use 127.0.x.x
 DEFAULT_IP=$(ip addr show $(ip route | awk '/default/ { print $5 }') | grep "inet" | head -n 1 | awk '/inet/ {print $2}' | cut -d'/' -f1)
@@ -125,7 +125,7 @@ INSTALL_LDAP=""                 # Add Active Directory extension (true/false)
 INSTALL_QCONNECT=""             # Add Guacamole console quick connect feature (true/false)
 INSTALL_HISTREC=""              # Add Guacamole history recording storage feature (true/false)
 HISTREC_PATH=""                 # If blank "" sets the Apache's default path of /var/lib/guacamole/recordings
-GUAC_URL_REDIR=""               # Auto redirect of host root URL http://xxx:8080 to http://xxx:8080/guacamole  (true/false)
+GUAC_URL_REDIR=""               # Auto redirect of host root URL http://xxx:7564 to http://xxx:7564/guacamole  (true/false)
 INSTALL_NGINX=""                # Install & configure Nginx reverse proxy http:80 frontend (true/false)
 PROXY_SITE=""                   # Local DNS name for reverse proxy site and/or self signed TLS certificates (blank "" defaults to $DEFAULT_FQDN)
 SELF_SIGN=""                    # Add self signed TLS/https support to Nginx (true/false, Let's Encrypt not available with this option)
@@ -568,9 +568,9 @@ if [[ -z ${INSTALL_NGINX} ]]; then
     fi
 fi
 
-# Prompt to redirect http://root:8080 to http://root:8080/guacamole if not installing reverse proxy
+# Prompt to redirect http://root:7564 to http://root:7564/guacamole if not installing reverse proxy
 if [[ -z ${GUAC_URL_REDIR} ]] && [[ "${INSTALL_NGINX}" = false ]]; then
-    echo -e -n "FRONT END: Redirect Guacamole http://domain.root:8080 to /guacamole [y/n]? [default y]: "
+    echo -e -n "FRONT END: Redirect Guacamole http://domain.root:7564 to /guacamole [y/n]? [default y]: "
     read PROMPT
     if [[ ${PROMPT} =~ ^[Nn]$ ]]; then
         GUAC_URL_REDIR=false
@@ -791,9 +791,9 @@ if [[ $? -ne 0 ]]; then
     echo -e "${LRED}2-install-guacamole.sh FAILED. See ${INSTALL_LOG}${GREY}" 1>&2
     exit 1
 elif [[ "${GUAC_URL_REDIR}" = true ]]; then
-    echo -e "${LGREEN}Guacamole install complete\nhttp://${PROXY_SITE}:8080 - login user/pass: guacadmin/guacadmin\n${LYELLOW}***Be sure to change the password***${GREY}"
+    echo -e "${LGREEN}Guacamole install complete\nhttp://${PROXY_SITE}:7564 - login user/pass: guacadmin/guacadmin\n${LYELLOW}***Be sure to change the password***${GREY}"
 else
-    echo -e "${LGREEN}Guacamole install complete\nhttp://${PROXY_SITE}:8080/guacamole - login user/pass: guacadmin/guacadmin\n${LYELLOW}***Be sure to change the password***${GREY}"
+    echo -e "${LGREEN}Guacamole install complete\nhttp://${PROXY_SITE}:7564/guacamole - login user/pass: guacadmin/guacadmin\n${LYELLOW}***Be sure to change the password***${GREY}"
 fi
 
 # Add a Guacamole database backup (Mon-Fri 12:00am) into the current user's cron

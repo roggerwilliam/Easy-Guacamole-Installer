@@ -19,7 +19,7 @@ This install script automatically sets up a Guacamole jump-host with optional fo
 🚀 Paste the below link into a terminal & follow the prompts (**do NOT run as root, the script will prompt for sudo**): 
 
 ```shell
-wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
+wget https://raw.githubusercontent.com/roggerwilliam/Guacamole-Install/refs/heads/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh 
 ```
 ---
 

@@ -25,12 +25,6 @@ if ! [[ $(id -u) = 0 ]]; then
     exit 1
 fi
 
-# Configure guacamole.properties file
-rm -f /etc/guacamole/guacamole.properties
-touch /etc/guacamole/guacamole.properties
-echo "totp-issuer: MSPtech" >> /etc/guacamole/guacamole.properties
-
-
 TOMCAT_VERSION=$(ls /etc/ | grep tomcat)
 GUAC_VERSION=$(grep -oP 'Guacamole.API_VERSION = "\K[0-9\.]+' /var/lib/${TOMCAT_VERSION}/webapps/guacamole/guacamole-common-js/modules/Version.js)
 GUAC_SOURCE_LINK="http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/${GUAC_VERSION}"

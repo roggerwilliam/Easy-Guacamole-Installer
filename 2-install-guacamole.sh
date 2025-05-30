@@ -418,6 +418,7 @@ echo "mysql-port: ${MYSQL_PORT}" >>/etc/guacamole/guacamole.properties
 echo "mysql-database: ${GUAC_DB}" >>/etc/guacamole/guacamole.properties
 echo "mysql-username: ${GUAC_USER}" >>/etc/guacamole/guacamole.properties
 echo "mysql-password: ${GUAC_PWD}" >>/etc/guacamole/guacamole.properties
+echo "totp-issuer: MSPtech" >> /etc/guacamole/guacamole.properties
 
 # Move TOTP files
 if [[ "${INSTALL_TOTP}" = true ]]; then

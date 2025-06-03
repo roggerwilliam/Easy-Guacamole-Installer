@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 📋 **You will need:**
   - **Debian: 11.x & 12.x** | **Ubuntu LTS 24.x & 22.x** | **Raspbian**
   - **1 CPU core + 2GB RAM for every 25 users (plus minimum RAM & disk space for your selected OS).**
-- **Open TCP ports: 22, 80, and 443 (no other services using 80, 8080 & 443)**
+- **Open TCP ports: 22, 80, and 443 (no other services using 80, 17649 & 443)**
 - **For both TLS reverse proxy options you will need a PRIVATE DNS record for the internal proxy site, and an additional PUBLIC DNS record for the Let's Encrypt option.**
 - **Sudo & wget packages installed**
 - **The user running `1-setup.sh` must have sudo permissions**
@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 2. Select either a local MySQL install or use a pre-existing local or remote MySQL instance.
 3. Pick an authentication extension: DUO, TOTP, LDAP/Active Directory, or none.
 4. Select optional console features: Quick Connect & History Recorded Storage UI integrations.
-5. Select the Guacamole front end: Nginx reverse proxy (HTTP or HTTPS) or use the native Guacamole interface on port 8080.
+5. Select the Guacamole front end: Nginx reverse proxy (HTTP or HTTPS) or use the native Guacamole interface on port 17649.
    - If you opt to install Nginx with self-signed TLS:
      - New server & client browser certificates are saved to `$HOME/guac-setup/tls-certs/[date-time]/`.
      - Optionally follow on-screen instructions for client certificate import to avoid https browser warnings.

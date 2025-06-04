@@ -1,8 +1,6 @@
 {
-    "NAME" : "English",
-		
-    "APP":{
-	
-	"NAME" : "Itiligent" 
+  "NAME" : "English",
+  "APP":{
+	      "NAME" : "Login Cloud" 
 	  }
 }

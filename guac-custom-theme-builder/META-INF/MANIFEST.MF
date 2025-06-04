@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
-Name: branding
-Specification-Title: Custom Guacamole Theme CSS
+Name: geek2gether
+Specification-Title: geek2gether css
 Specification-Version: 1.0
-Implementation-Title: Custom Guacamole Theme CSS
+Implementation-Title: geek2gether css
 Implementation-Version: 1.0
-
+Created-By: 22.04 (Ubuntu)
 

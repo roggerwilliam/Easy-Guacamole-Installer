@@ -1,0 +1,294 @@
+/* Colour codes used */
+/*    Guacamole grassy green: #88bf5b mudei para #5b7cbf */
+/*    Warning red #ff2233 */
+/*    Main background charcoal #3f3f3f mudei para #dbdbdb */
+/*    Input fields dark charcoal #2b2b2b  mudei para #251d54*/
+/*    Login dialog background black #000000 */
+/*    All text: #ececec */
+
+
+/* General Style */
+body {
+    color: #000000;
+    background-color: #ededed;
+}
+pre {
+    color: #ececec;
+    background-color: #2b2b2b;
+    border: 1px solid #000000;
+}
+
+a[href]:visited {
+    color: #5b7cbf;
+}
+a[href] {
+    color: #ffffff;
+}
+
+div.location,
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+textarea {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Login */
+div.login-ui {
+    color: #ececec;
+    background-color: #f2f2f2;
+}
+.login-ui .login-fields .labeled-field input:focus {
+    background-color: #c7c7c7;
+    color: #000000;
+}
+
+.login-ui .login-fields .labeled-field {
+    background-color: #dbdbdb;
+    color: #000000;
+}
+
+.login-ui .login-dialog .logo {
+    background-image: url('app/ext/custom-namespace/images/logo.png');
+    width: 340px;
+    height:	70.54px;
+    -webkit-background-size: 100%;
+
+}
+
+.login-ui .login-dialog {
+    background-color: #dbdbdb;
+    color: #2144d7;
+	width: 100%;
+    max-width: 480px;
+    text-align: left;
+    padding: 20px;
+    font-size: 25px;
+    display: inline-block;
+}
+}
+
+.login-ui .login-dialog .version .app-name {
+    font-weight: 300;
+    text-transform: none;
+    text-align: center;
+    font-size: 36px;
+    color: #2f219e;
+    font-family: arial, sans-serif;
+}
+/*caixa de dialogo de logout*/
+div.logged-out-modal .ng-scope {
+    color: #000000;
+    background-color: #dbdb25;
+	border: 1px solid #dbdbdb;
+}
+/*botão da caixa de dialogo de logout*/
+div.logged-out-modal .ng-scope button {
+    color: #000000;
+    background-color: #dbdbdb;
+    border: 1px solid #ececec;
+}
+
+
+/*faixa da tela de log-out*/
+div.modal-contents {
+    color: #000000;
+    background-color: #db74db;
+
+}
+
+/*fundo tela de log-out*/
+.logged-out-modal guac-modal {
+    color: #000000;
+    background-color: #840404;
+}
+
+div.notification.ng.scope {
+    border: 1px solid #ececec;
+}
+
+.notification.error {
+    background-color: #ff2233;
+}
+
+.client-status-modal .notification {
+    background: #cd0808;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    padding: 44px;
+    text-align: center;
+    border: none;
+}
+
+
+.client-status-modal .notification.error {
+    background-color: #ff2233;
+}
+
+button.danger {
+    background: #ff2233;
+ }
+
+.login-ui.error p.login-error {
+    color: #ececec;
+    background-color: #ff2233;
+}
+
+
+/* Home */
+.recent-connections .connection:hover {
+    background-color: #2f9629;
+}
+
+.menu-dropdown .menu-contents {
+    background-color: #c3c3c3;
+}
+.menu-dropdown .menu-contents li a {
+    color: #000000;
+}
+.menu-dropdown .menu-contents li a:hover {
+    background-color: #2f9629;
+}
+
+.list-item.selected {
+    background: #2f9629
+}
+.list-item:not(.selected) .caption:hover {
+    background-color: #2f9629;
+}
+.list-item .name {
+    color: #000000;
+}
+
+.settings.connections .connection-list .new-sharing-profile {
+    opacity: .8;
+}
+
+.settings.connections .connection-list .new-connection, .settings.connections .connection-list .new-connection-group, .settings.connections .connection-list .new-sharing-profile {
+    opacity: .8;
+    font-style: italic;
+}
+
+
+
+.notification {
+    color: #ececec;
+    background-color: #2b2b2b;
+}
+
+
+/* Menus */
+.menu {
+    color: #ffffff;
+    background-color: #dbdbdb;
+}
+
+.clipboard,
+.clipboard-service-target {
+    background-color: #2b2b2b;
+    color: #8f8d8f;
+}
+
+.menu-dropdown .menu-contents li a.danger {
+    color: #ececec;
+    font-weight: 700;
+    background-color: #ff2233;
+}
+
+/* Connections */
+#connection-warning {
+    background-color: #dbdbdb;
+}
+
+.transfer-manager {
+    background-color: #2b2b2b;
+}
+.transfer.error {
+    background-color: #ff2233;
+}
+
+
+/* Settings */
+.page-tabs .page-list li a[href],
+.section-tabs li a {
+    color: #001dff;
+}
+.page-tabs .page-list li a[href]:hover,
+.section-tabs li a:hover {
+    background-color: #93dd76;
+}
+.page-tabs .page-list li a[href]:visited {
+    color: #001dff;
+}
+
+
+
+
+.page-tabs .page-list li a[href]:active,
+.section-tabs li a:active {
+background: #2f9629;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+.settings table.session-list tr.session:hover {
+    background-color: #8f8d8f;
+}
+
+.location-chooser .dropdown {
+    background-color: #ffffff;
+}
+
+.settings.connectionHistory a.history-session-recording {
+    color: #5b7cbf;
+}
+
+.settings.connectionHistory a.history-session-recording:after {
+    opacity: .0;
+}
+
+.user a,
+.user-group a,
+.connection a,
+.connection-group a {
+    color: #000000;
+}
+.user a:hover,
+.user-group a:hover,
+.connection a:hover,
+.connection-group a:hover {
+    color: #000000;
+}
+.user a:visited,
+.user-group a:visited,
+.connection a:visited,
+.connection-group a:visited {
+    color: #000000;
+}
+
+.manage-user .notice.read-only {
+    color: #ececec;
+    background-color: #2b2b2b;
+}
+
+#filesystem-menu .header.breadcrumbs .breadcrumb:hover {
+    background-color: #5b7cbf;
+}
+
+#guac-menu #zoom-out:hover,
+#guac-menu #zoom-in:hover {
+    background-color: #5b7cbf;
+}

@@ -1,0 +1,175 @@
+/* enjoy */
+
+body{
+    /* background-color: white; */
+     background-color: #fff;
+    background-repeat: no-repeat;
+}
+div.login-ui{
+    background-color: white !important;
+}
+
+.page-tabs .page-list li a[href].current{
+    background: #31731f !important;
+    color: #FFFFFF !important;
+}
+/* menu page settings */
+.page-tabs .page-list li a[href]:hover{
+    background: #394d0f !important;
+    color: #FFFFFF !important;
+}
+.page-list-level li  
+.menu-dropdown{
+    background: #979879 !important;
+}
+
+.list-item:not(.selected) .caption:hover{
+    background: #e5e5cd !important; 
+    border:solid 1px #CCCCCC !important;
+}
+
+.recent-connections .connection:hover {
+    background: #a3baab !important;
+}
+.user-menu{
+    background: #fff !important;
+    color: #000000 !important;    
+}
+.user-menu:hover{
+    background: #009933 !important;
+    color: #000000 !important;    
+}
+.menu-dropdown .ng-isolate-scope .open{
+    background: #979879 !important;
+}
+
+.header {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.list-item .name {
+    color: #328c00;
+    font-weight: 400;
+    padding: 0.1em;
+    margin-left: 0.25em;
+}
+
+a.button, button, input[type=submit] {
+    background-color: #009933;
+}
+
+.login-ui .login-dialog .logo {
+    background-image: url('app/ext/msp/images/logo.png');
+    width: 340px;
+    height:	70.54px;
+    -webkit-background-size: 100%;
+}	
+	
+	/*display: block;
+    margin: 0.5em auto;
+    width: 3em;
+    height: 3em;
+    background-size: 3em 3em;
+    -moz-background-size: 3em 3em;
+    -webkit-background-size: 3em 3em;
+    -khtml-background-size: 3em 3em;
+    background-image: url(app/ext/msp/images/logo.png);
+}*/
+
+.login-ui .login-dialog {
+	background-color: black;
+    max-width: 5in;
+    border: solid 5px black;
+}
+
+.login-ui .login-dialog .version .app-name {
+    font-weight: 300;
+    text-transform: none;
+    text-align: center;
+    font-size: 1.05em;
+    color: #d6d6d6;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* login page error */
+
+.login-ui.error p.login-error {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    margin: 0.2em;
+    background: #f14141;
+    border: 1px solid #9d5b5b;
+    -moz-border-radius: .25em;
+    -webkit-border-radius: 0.25em;
+    -khtml-border-radius: .25em;
+    text-align: center;
+    color: #000;
+}
+
+input[name="username"],input[name="password"],input[name="guac-totp"],input[ng-model="searchString"]{
+    background-color: #fff !important;
+/*    background: #fff !important; */
+}
+
+/* the login page header called "navigation" */
+
+.navigation {
+    background: black !important;
+    color: #fff !important;
+}
+
+.navigation a:hover {
+  background-color: #009933;
+  color: black;
+}
+
+.navigation a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    max-width: unset;
+    float: right;
+}
+
+.navigation{
+    padding-left: 88px;
+    padding-right: 88px;
+}
+
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 64px;
+    background: #1b74da;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
+
+/*
+ * Add logo on the upper left
+ */
+.hlogo {
+    width: 145px;
+    height: 60px;
+    background: black url(app/ext/msp/images/logo.png) no-repeat left/142px;
+    font-size: 0;
+    line-height: 0;
+}
